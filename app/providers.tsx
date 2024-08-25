@@ -8,7 +8,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
     //INIT AOS animation
     useEffect(() => {
         if(typeof window === 'undefined') return;
-        AOS.init();
+        AOS.init({
+            duration: 800
+        });
     }, []);
 
     return (

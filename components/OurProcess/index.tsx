@@ -1,11 +1,12 @@
 "use client";
 
 import SectionTitle from "../Common/SectionTitle";
+import {Element} from "react-scroll";
 
 const OurProcess = () => {
 
     return (
-        <section className="relative z-10 py-16 md:py-20 lg:py-28">
+        <Element name="Our Process" className="relative z-10 py-16 md:py-20 lg:py-28">
             <div className="container">
                 <SectionTitle
                     title="Our Process"
@@ -16,10 +17,7 @@ const OurProcess = () => {
 
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4">
-                        <div
-                            className="mx-auto max-w-[1280px] overflow-hidden rounded-md"
-                            data-wow-delay=".15s"
-                        >
+                        <div className="mx-auto max-w-[1280px] overflow-hidden rounded-md">
                             <section className="relative overflow-hidden">
                                 <div className="mt-2 md:mt-0 py-12 pb-6 sm:py-16 lg:pb-24 overflow-hidden">
                                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative">
@@ -35,7 +33,7 @@ const OurProcess = () => {
                                                 </svg>
                                             </div>
                                             <div className="relative grid grid-cols-1 text-center gap-y-8 sm:gap-y-10 md:gap-y-12 md:grid-cols-3 gap-x-12">
-                                                <div className='col-span-1'>
+                                                <div className='col-span-1' data-aos="zoom-in-right">
                                                     <div
                                                         className="flex items-center justify-center w-16 h-16 mx-auto bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-full shadow">
                                                         <span className="text-xl font-semibold text-primary">1</span>
@@ -47,7 +45,7 @@ const OurProcess = () => {
                                                         Our process begins with a meticulous intake phase, led by our Business Analyst team, where we gather and analyze your requirements to ensure a comprehensive understanding of your needs. With this clarity, our expert Development and QC teams craft tailored solutions that exceed expectations.
                                                     </p>
                                                 </div>
-                                                <div>
+                                                <div data-aos="zoom-in">
                                                     <div
                                                         className="flex items-center justify-center w-16 h-16 mx-auto bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-full shadow">
                                                         <span
@@ -60,7 +58,7 @@ const OurProcess = () => {
                                                         During production, we ensure transparent communication, offer flexibility through our agile approach for swift adjustments, and conduct rigorous testing to guarantee software quality before delivery.
                                                     </p>
                                                 </div>
-                                                <div>
+                                                <div data-aos="zoom-in-left">
                                                     <div
                                                         className="flex items-center justify-center w-16 h-16 mx-auto bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-full shadow">
                                                         <span
@@ -83,7 +81,7 @@ const OurProcess = () => {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
-        </section>
+        </Element>
     );
 };
 

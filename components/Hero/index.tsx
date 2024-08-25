@@ -36,7 +36,7 @@ const Hero = () => {
                                         type="button"
                                         name="Contact Us"
                                         id="Contact Us"
-                                        className="flex flex-row items-center rounded-full bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                                        className="flex flex-row items-center h-[56px] rounded-full bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                                         onClick={() => scroller.scrollTo('Contact', {
                                             duration: 1500,
                                             delay: 100,
