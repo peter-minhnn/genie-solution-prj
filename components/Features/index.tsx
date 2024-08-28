@@ -2,7 +2,7 @@
 
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
-import featuresData from "./featuresData";
+import data from "./data";
 import {Element} from "react-scroll";
 
 const Features = () => {
@@ -17,7 +17,7 @@ const Features = () => {
                     />
 
                     <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-                        {featuresData.map((feature: any) => (
+                        {data.map((feature: any) => (
                             <SingleFeature key={feature.id} feature={feature}/>
                         ))}
                     </div>

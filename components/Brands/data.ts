@@ -35,7 +35,7 @@ const brandsData: Brand[] = [
         id: 6,
         name: "AWS",
         href: "https://plainadmin.com",
-        image: "/images/logo/aws-logo.png",
+        image: "/images/logo/aws.svg",
     },
 ];
 

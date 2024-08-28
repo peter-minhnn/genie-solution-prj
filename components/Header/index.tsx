@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {useEffect, useState} from "react";
 import {usePathname} from "next/navigation";
-import menuData from "@/components/Header/menuData";
+import data from "@/components/Header/data";
 import { Link } from 'react-scroll';
 
 const Header = () => {
@@ -59,18 +59,9 @@ const Header = () => {
                                 <Image
                                     src="/logo_trans.png"
                                     alt="logo"
-                                    width={256}
+                                    width={350}
                                     height={112}
                                     className="w-full dark:hidden mix-blend-multiply"
-                                    priority
-                                    fetchPriority='auto'
-                                />
-                                <Image
-                                    src="/logo_trans.png"
-                                    alt="logo"
-                                    width={256}
-                                    height={112}
-                                    className="hidden w-full dark:block mix-blend-multiply"
                                     priority
                                     fetchPriority='auto'
                                 />
@@ -109,7 +100,7 @@ const Header = () => {
                                     }`}
                                 >
                                     <ul className="block lg:flex lg:space-x-12">
-                                        {menuData.map((menuItem, index) => (
+                                        {data.map((menuItem, index) => (
                                             <li key={index} className="group relative">
                                                 {menuItem.path ? (
                                                     <Link

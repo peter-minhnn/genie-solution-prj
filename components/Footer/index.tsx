@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -15,13 +15,6 @@ const Footer = () => {
                                         src="/Logo.png"
                                         alt="logo"
                                         className="w-full dark:hidden"
-                                        width={256}
-                                        height={112}
-                                    />
-                                    <Image
-                                        src="/Logo.png"
-                                        alt="logo"
-                                        className="hidden w-full dark:block"
                                         width={256}
                                         height={112}
                                     />

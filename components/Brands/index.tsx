@@ -1,5 +1,5 @@
 import {Brand} from "@/types/brand";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import brandsData from "./data";
 
 const Brands = () => {
@@ -33,7 +33,7 @@ const SingleBrand = ({brand}: { brand: Brand }) => {
                 rel="nofollow noreferrer"
                 className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
             >
-                <Image src={image} alt={name} className="block dark:hidden" objectFit='contain' fill sizes='100% 100%'/>
+                <Image src={image} alt={name} className="block dark:hidden" objectFit='contain' layout='fill' sizes='100% 100%'/>
             </a>
         </div>
     );

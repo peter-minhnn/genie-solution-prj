@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionTitle from "../Common/SectionTitle";
 import {Element} from 'react-scroll';
 
@@ -41,7 +41,7 @@ we're dedicated to bringing your vision to life with precision and efficiency. <
                                     <Image
                                         src="/images/about/about-image.svg"
                                         alt="about-image"
-                                        fill
+                                        layout='fill'
                                         className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                                         priority
                                         fetchPriority='auto'
@@ -49,7 +49,7 @@ we're dedicated to bringing your vision to life with precision and efficiency. <
                                     <Image
                                         src="/images/about/about-image-dark.svg"
                                         alt="about-image"
-                                        fill
+                                        layout='fill'
                                         className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                                         priority
                                         fetchPriority='auto'
