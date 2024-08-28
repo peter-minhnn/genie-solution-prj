@@ -12,16 +12,14 @@ const OurProcess = () => {
                     title="Our Process"
                     paragraph="At Genie Solution Vietnam, we take pride in our streamlined software intake and production process designed to deliver exceptional results for our clients"
                     center
-                    mb="40px"
                 />
-
-                <div className="-mx-4 flex flex-wrap">
+                <div className="mx-4 flex flex-wrap">
                     <div className="w-full px-4">
                         <div className="mx-auto max-w-[1280px] overflow-hidden rounded-md">
                             <section className="relative overflow-hidden">
-                                <div className="mt-2 md:mt-0 py-12 pb-6 sm:py-16 lg:pb-24 overflow-hidden">
+                                <div className="md:mt-0 pb-6 lg:pb-24 overflow-hidden">
                                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative">
-                                        <div className="relative mt-12 lg:mt-20">
+                                        <div className="relative mt-5">
                                             <div className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
                                                 <svg className="w-full" xmlns="http://www.w3.org/2000/svg" width="875"
                                                      height="48" viewBox="0 0 875 48"
@@ -80,7 +78,6 @@ const OurProcess = () => {
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
         </Element>
     );
 };
