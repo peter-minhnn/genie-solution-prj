@@ -51,7 +51,6 @@ export const Tabs = forwardRef((props: TabProps, ref) => {
                         </button>
                     ))}
                 </div>
-
             </div>
             <div className="flex justify-center">
                 <div className="inline-flex flex-wrap justify-center items-center py-2 w-full">

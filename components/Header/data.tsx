@@ -27,7 +27,19 @@ const data: Menu[] = [
     },
     {
         id: 4,
-        title: "Our Software",
+        title: "Our Showcases",
+        path: "/",
+        newTab: false,
+    },
+    {
+        id: 5,
+        title: "Teams",
+        path: "/",
+        newTab: false,
+    },
+    {
+        id: 6,
+        title: "Contact",
         path: "/",
         newTab: false,
     },

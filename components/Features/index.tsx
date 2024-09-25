@@ -12,7 +12,7 @@ const Features = () => {
                 <div className="container">
                     <SectionTitle
                         title="Main Features"
-                        paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+                        paragraph="At Genie Solution Vietnam, we bring innovation to life with our powerful suite of solutions, from marketplace systems and tracking tools to loyalty programs, CMS platforms, fitness apps, and seamless payment integrations."
                         center
                     />
 

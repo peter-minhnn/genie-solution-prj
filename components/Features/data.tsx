@@ -14,8 +14,7 @@ const data: Feature[] = [
             </svg>
         ),
         title: "Marketplace System",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+        paragraph: "At Genie Solution Vietnam, we excel in delivering comprehensive Marketplace solutions tailored to diverse sectors such as education, recruitment, and e-commerce. Our expertise enables businesses to effortlessly create and manage online platforms for posting courses, hiring talent, or selling products with unparalleled ease and efficiency. Leveraging cutting-edge technologies like React.js, Node.js, and MongoDB, we ensure high-performance platforms that offer exceptional scalability and an optimized user experience, catering to the dynamic needs of modern enterprises.",
     },
     {
         id: 2,
@@ -30,8 +29,7 @@ const data: Feature[] = [
             </svg>
         ),
         title: "Tracking System",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+        paragraph: "We specialize in developing robust Tracking Systems for various applications, from ticket booking systems to shipping management platforms. Our solutions include real-time tracking features, automated status updates, and customer notifications to enhance user experience and reduce operational costs. With a proven track record in building complex and large-scale systems, Genie Solution guarantees accuracy, security, and top-tier performance across all our tracking solutions, empowering businesses to operate smoothly and efficiently.",
     },
     {
         id: 3,
@@ -46,8 +44,7 @@ const data: Feature[] = [
             </svg>
         ),
         title: "Loyalty System",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+        paragraph: "Genie Solution Vietnam proudly offers state-of-the-art Loyalty Systems designed to boost customer engagement and retention. Our solutions feature points accumulation, voucher issuance, and event-based rewards to optimize marketing strategies and elevate the customer experience. Having collaborated with numerous renowned brands, we ensure flexible systems that integrate seamlessly with existing platforms while supporting businesses in driving growth and fostering loyalty among their clientele."
     },
     {
         id: 4,
@@ -62,8 +59,7 @@ const data: Feature[] = [
             </svg>
         ),
         title: "CMS System",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+        paragraph: "We are experts in creating sophisticated Content Management Systems (CMS) for homepages and landing pages, providing a superior user experience and easy management. Utilizing tools such as WordPress, Angular, and HTML/CSS, we craft visually stunning websites that load quickly and are fully optimized for SEO. With a structured development process and a diverse portfolio, Genie Solution Vietnam guarantees that the final product meets the highest quality standards and aligns perfectly with client expectations."
     },
     {
         id: 5,
@@ -77,8 +73,7 @@ const data: Feature[] = [
             </svg>
         ),
         title: "Fitness System",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+        paragraph: "At Genie Solution Vietnam, we develop specialized Fitness Systems, including web apps that measure body metrics, customize workout plans, and offer personalized diet regimes. These applications feature progress tracking, health assessments, and individualized workout programs. With our expertise in UX/UI and advanced technology, we create user-friendly applications that enhance the fitness journey and wellness goals of users, delivering maximum support and motivation."
     },
     {
         id: 6,
@@ -93,8 +88,6 @@ const data: Feature[] = [
             </svg>
         ),
         title: "Payment Integration",
-        paragraph:
-            "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
-    },
+        paragraph: "Genie Solution Vietnam is a leader in integrating payment gateways such as Stripe, PayPal, Momo, Zalopay, VNPAY, VNPT-Epay, and Onepay into existing business systems. Our integrations are seamless, secure, and conducted with minimal disruption to business operations. By supporting multi-platform integration and adhering to the highest security standards, we enable businesses to expand their payment options and enhance the overall user experience across global markets."    },
 ];
 export default data;

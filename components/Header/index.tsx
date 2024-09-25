@@ -64,6 +64,7 @@ const Header = () => {
                                     className="w-full dark:hidden mix-blend-multiply"
                                     priority
                                     fetchPriority='auto'
+                                    objectFit="cover"
                                 />
                             </a>
                         </div>
