@@ -20,6 +20,7 @@ export default function Contact() {
     const {
         register,
         handleSubmit,
+        reset,
         formState: {errors},
     } = useForm<ContactType>({
         resolver: zodResolver(ContactSchema), // Apply the zodResolver
@@ -38,6 +39,7 @@ export default function Contact() {
                 title: "Success",
                 description: response.message,
             });
+            reset();
         } else {
             toast({
                 className: ToastPosition(),

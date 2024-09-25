@@ -1,10 +1,10 @@
+import {Dispatch, SetStateAction} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {LoginSchema} from "@/schemas/loginShema";
 import {LoginType} from "@/types/login";
-import {cn} from "@/lib/utils";
-import {Dispatch, SetStateAction} from "react";
+import {cn, ToastPosition} from "@/lib/utils";
 
 type LoginModalProps = {
     setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
@@ -24,7 +24,7 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
         // Handle form submission
         if(data.username === "admin" && data.password === "admin") {
             toast({
-                className: cn("top-[-680px] right-0"),
+                className: ToastPosition(),
                 variant: "default",
                 title: "Success",
                 description: "Login success",
@@ -33,7 +33,7 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
             return;
         }
         toast({
-            className: cn("top-[-680px] right-0"),
+            className: ToastPosition(),
             variant: "default",
             title: "Login Failed",
             description: "Username or password is incorrect"

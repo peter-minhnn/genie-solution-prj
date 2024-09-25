@@ -1,4 +1,3 @@
-import type {NextApiRequest} from 'next'
 import fs from 'fs';
 import {ContactType} from "@/types/contact";
 

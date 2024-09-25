@@ -12,6 +12,9 @@ export const saveContact = async (newData: ContactType): Promise<BaseResponseTyp
     try {
         const data = await fetch(`${API_URL}/post`, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(newData)
         })
         return await data.json() ;
@@ -24,6 +27,9 @@ export const deleteContact = async (id: string): Promise<BaseResponseType> => {
     try {
         const data = await fetch(`${API_URL}/delete`, {
             method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({id})
         })
         return await data.json();
