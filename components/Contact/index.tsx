@@ -2,7 +2,7 @@
 
 import {Element} from "react-scroll";
 import {useForm} from "react-hook-form";
-import {cn, ToastPosition} from "@/lib/utils";
+import {cn} from "@/lib/utils";
 import {v4} from 'uuid';
 
 //Services
