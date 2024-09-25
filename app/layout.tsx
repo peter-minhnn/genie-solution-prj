@@ -2,12 +2,12 @@ import type {Metadata} from "next";
 import {ReactNode, StrictMode} from "react"; // Optional Theme applied to the Data Grid
 import {Quicksand} from "next/font/google";
 import {Providers} from "@/app/providers";
+import { Toaster } from 'react-hot-toast';
 
 //Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import {Toaster} from "@/components/ui/toaster";
 //CSS
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import "../styles/globals.css";

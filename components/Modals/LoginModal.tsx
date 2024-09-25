@@ -1,6 +1,6 @@
 import {Dispatch, SetStateAction} from "react";
-import {useToast} from "@/hooks/use-toast";
 import {useForm} from "react-hook-form";
+import {toast} from "react-hot-toast";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {LoginSchema} from "@/schemas/loginShema";
 import {LoginType} from "@/types/login";
@@ -11,7 +11,6 @@ type LoginModalProps = {
 }
 
 export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
-    const {toast} = useToast()
     const {
         register,
         handleSubmit,
@@ -23,19 +22,13 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
     const onLoginSubmit = async (data: LoginType) => {
         // Handle form submission
         if(data.username === "admin" && data.password === "admin") {
-            toast({
-                variant: "default",
-                title: "Success",
-                description: "Login success",
-            });
+            toast.success("Login success");
             setIsLoggedIn(true);
+            localStorage.setItem("isLoggedIn", "true");
             return;
         }
-        toast({
-            variant: "default",
-            title: "Login Failed",
-            description: "Username or password is incorrect"
-        });
+        toast.error("Username or password is incorrect");
+        localStorage.getItem("isLoggedIn") && localStorage.removeItem("isLoggedIn");
         setIsLoggedIn(false);
     };
 
@@ -49,16 +42,6 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                             Sign in to our platform
                         </h3>
-                        {/*<button type="button"*/}
-                        {/*        className="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"*/}
-                        {/*        data-modal-hide="authentication-modal">*/}
-                        {/*    <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"*/}
-                        {/*         viewBox="0 0 14 14">*/}
-                        {/*        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"*/}
-                        {/*              stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>*/}
-                        {/*    </svg>*/}
-                        {/*    <span className="sr-only">Close modal</span>*/}
-                        {/*</button>*/}
                     </div>
                     <div className="p-4 md:p-5">
                         <form className="space-y-4" onSubmit={handleSubmit(onLoginSubmit)}>

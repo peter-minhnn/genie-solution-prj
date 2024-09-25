@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {ContactType} from "@/types/contact";
 
-const DATA_PATH = 'public/json/contact.json';
+const DATA_PATH = '/json/contact.json';
 
 export async function POST(req: Request) {
     try {
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
             return Response.json({code: 0, message: 'Invalid request', data: null});
         }
 
-        const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8')) as ContactType[];
+        const data = JSON.parse(fs.readFileSync(`${process.env.NEXT_PUBLIC_API_PATH}${DATA_PATH}`, 'utf8')) as ContactType[];
         const idx = data.findIndex(x => x.email === reqBody.email);
         if (idx !== (-1)) {
             data[idx] = {
@@ -29,6 +29,6 @@ export async function POST(req: Request) {
             data: data
         });
     } catch (error) {
-        return Response.json({code: 0, message: 'Failed to add contact', data: null});
+        return Response.json({code: 0, message: 'Failed to add contact', data: error});
     }
 }

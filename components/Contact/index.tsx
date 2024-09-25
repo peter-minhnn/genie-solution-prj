@@ -4,11 +4,11 @@ import {Element} from "react-scroll";
 import {useForm} from "react-hook-form";
 import {cn} from "@/lib/utils";
 import {v4} from 'uuid';
+import {toast} from "react-hot-toast";
 
 //Services
 import {saveContact} from "@/services/contactService";
 //Hooks
-import {useToast} from "@/hooks/use-toast";
 import {zodResolver} from "@hookform/resolvers/zod";
 //Types
 import {ContactType} from "@/types/contact";
@@ -16,7 +16,6 @@ import {ContactType} from "@/types/contact";
 import {ContactSchema} from "@/components/Contact/schema";
 
 export default function Contact() {
-    const {toast} = useToast()
     const {
         register,
         handleSubmit,
@@ -33,18 +32,10 @@ export default function Contact() {
             id: v4()
         });
         if (response.code === 1) {
-            toast({
-                variant: "default",
-                title: "Success",
-                description: response.message,
-            });
+            toast.success(response.message);
             reset();
         } else {
-            toast({
-                variant: "destructive",
-                title: "Something went wrong",
-                description: response.message,
-            });
+            toast.error(response.message);
         }
     };
 
