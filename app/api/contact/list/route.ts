@@ -1,13 +1,13 @@
 import fs, {readFileSync} from "fs";
 
-const DATA_PATH = 'public/json/contact.json';
 
 export async function GET() {
+    const path = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
     try {
-        if (!fs.existsSync(DATA_PATH)) {
+        if (!fs.existsSync(path)) {
             return Response.json({code: 0, message: 'File not found'});
         }
-        const response = readFileSync(DATA_PATH, "utf-8");
+        const response = readFileSync(path, "utf-8");
         return Response.json({
             message: 'Get contact successfully',
             data: response ? JSON.parse(response) : null,
