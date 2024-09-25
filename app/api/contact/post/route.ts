@@ -18,6 +18,7 @@ export async function POST(req: Request) {
         if (idx !== (-1)) {
             data[idx] = {
                 ...data[idx],
+                id: reqBody.id,
                 name: reqBody.name,
                 message: reqBody.message,
             };
