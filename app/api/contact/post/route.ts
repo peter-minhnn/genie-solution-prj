@@ -1,7 +1,7 @@
-import fs from 'fs';
+import fs, {readFileSync} from 'fs';
 import {ContactType} from "@/types/contact";
 
-const DATA_PATH = '/json/contact.json';
+const DATA_PATH = 'public/json/contact.json';
 
 export async function POST(req: Request) {
     try {
@@ -9,8 +9,11 @@ export async function POST(req: Request) {
         if (!reqBody || !Object.keys(reqBody).length) {
             return Response.json({code: 0, message: 'Invalid request', data: null});
         }
-
-        const data = JSON.parse(fs.readFileSync(`${process.env.NEXT_PUBLIC_API_PATH}${DATA_PATH}`, 'utf8')) as ContactType[];
+        const list = readFileSync(DATA_PATH, "utf-8");
+        if (!list) {
+            return Response.json({code: 0, message: 'File not found'});
+        }
+        const data = JSON.parse(list) as ContactType[];
         const idx = data.findIndex(x => x.email === reqBody.email);
         if (idx !== (-1)) {
             data[idx] = {
