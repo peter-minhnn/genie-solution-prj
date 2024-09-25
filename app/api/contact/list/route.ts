@@ -1,6 +1,6 @@
 import fs, {readFileSync} from "fs";
 
-const DATA_PATH = './json/contact.json';
+const DATA_PATH = 'public/json/contact.json';
 
 export async function GET() {
     try {

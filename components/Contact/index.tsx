@@ -34,7 +34,6 @@ export default function Contact() {
         });
         if (response.code === 1) {
             toast({
-                className: ToastPosition(),
                 variant: "default",
                 title: "Success",
                 description: response.message,
@@ -42,7 +41,6 @@ export default function Contact() {
             reset();
         } else {
             toast({
-                className: ToastPosition(),
                 variant: "destructive",
                 title: "Something went wrong",
                 description: response.message,

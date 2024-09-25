@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {ContactType} from "@/types/contact";
 
-const DATA_PATH = './json/contact.json';
+const DATA_PATH = 'public/json/contact.json';
 
 export async function POST(req: Request) {
     try {

@@ -24,7 +24,6 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
         // Handle form submission
         if(data.username === "admin" && data.password === "admin") {
             toast({
-                className: ToastPosition(),
                 variant: "default",
                 title: "Success",
                 description: "Login success",
@@ -33,7 +32,6 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
             return;
         }
         toast({
-            className: ToastPosition(),
             variant: "default",
             title: "Login Failed",
             description: "Username or password is incorrect"

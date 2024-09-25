@@ -1,8 +1,8 @@
 [
   {
-    "name": "Minh 2",
+    "name": "Minh",
     "email": "nnminh742@gmail.com",
-    "message": "new updated",
+    "message": "1",
     "id": "98d6a460-eb75-4e20-9d96-9b571ddb188d"
   },
   {
@@ -10,5 +10,11 @@
     "email": "ldcc.minhnguyen@lotte.vn",
     "message": "fffff",
     "id": "e5547d84-45da-4861-a286-0f8d6805f2bf"
+  },
+  {
+    "name": "Minh 4",
+    "email": "phucankim2000@gmail.comt",
+    "message": "1",
+    "id": "e7a2b614-9247-4174-85a7-82e0842e7c55"
   }
 ]

@@ -1,7 +1,6 @@
 import fs from "fs";
-import {NextApiRequest} from "next";
 
-const DATA_PATH = './json/contact.json';
+const DATA_PATH = 'public/json/contact.json';
 
 export async function DELETE(req: Request) {
     try {
