@@ -1,9 +1,8 @@
-import {NextApiRequest} from "next";
 import fs, {readFileSync} from "fs";
 
 const DATA_PATH = './json/contact.json';
 
-export async function GET(req: NextApiRequest) {
+export async function GET() {
     try {
         if (!fs.existsSync(DATA_PATH)) {
             return Response.json({code: 0, message: 'File not found'});
