@@ -1,8 +1,7 @@
 import fs, {readFileSync} from "fs";
-import path from "node:path";
 
 export async function GET() {
-    const jsonPath = path.resolve(process.env.NEXT_PUBLIC_JSON_CONTACT as string);
+    const jsonPath = process.cwd() + process.env.NEXT_PUBLIC_JSON_CONTACT;
 
     try {
         if (!fs.existsSync(jsonPath)) {

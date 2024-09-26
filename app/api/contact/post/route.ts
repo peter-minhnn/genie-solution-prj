@@ -1,9 +1,8 @@
 import fs, {readFileSync} from 'fs';
 import {ContactType} from "@/types/contact";
-import * as path from "node:path";
 
 export async function POST(req: Request) {
-    const jsonPath = path.resolve(process.env.NEXT_PUBLIC_JSON_CONTACT as string);
+    const jsonPath = process.cwd() + process.env.NEXT_PUBLIC_JSON_CONTACT;
 
     try {
         const reqBody = await req.json()
