@@ -1,13 +1,15 @@
 import fs, {readFileSync} from "fs";
-
+import path from "path";
 
 export async function GET() {
-    const path = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
+    const jsonPath = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
+    const jsonUrl = path.join(process.cwd(), jsonPath);
+
     try {
-        if (!fs.existsSync(path)) {
+        if (!fs.existsSync(jsonUrl)) {
             return Response.json({code: 0, message: 'File not found'});
         }
-        const response = readFileSync(path, "utf-8");
+        const response = readFileSync(jsonUrl, "utf-8");
         return Response.json({
             message: 'Get contact successfully',
             data: response ? JSON.parse(response) : null,
