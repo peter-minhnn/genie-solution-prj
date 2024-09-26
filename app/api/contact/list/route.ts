@@ -3,7 +3,7 @@ import path from "path";
 
 export async function GET() {
     const jsonPath = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
-    const jsonUrl = path.join(process.cwd(), jsonPath);
+    const jsonUrl = path.join(process.env.NEXT_PUBLIC_API_PATH as string, jsonPath);
 
     try {
         if (!fs.existsSync(jsonUrl)) {
