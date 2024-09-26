@@ -1,5 +1,6 @@
 import fs, {readFileSync} from 'fs';
 import {ContactType} from "@/types/contact";
+import * as path from "node:path";
 
 export async function POST(req: Request) {
     const jsonPath = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
@@ -9,7 +10,7 @@ export async function POST(req: Request) {
         if (!reqBody || !Object.keys(reqBody).length) {
             return Response.json({code: 0, message: 'Invalid request', data: null});
         }
-        const list = readFileSync(jsonPath, "utf-8");
+        const list = readFileSync(path.resolve(jsonPath, "utf-8"), "utf-8");
         if (!list) {
             return Response.json({code: 0, message: 'File not found'});
         }
@@ -25,7 +26,7 @@ export async function POST(req: Request) {
         }
         else data.push(reqBody);
 
-        fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), {encoding: 'utf8', flag: 'w'});
+        fs.writeFileSync(path.resolve(jsonPath, "utf-8"), JSON.stringify(data, null, 2), {encoding: 'utf8'});
 
         return Response.json({
             code: 1,
