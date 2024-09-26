@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/contact/post/route.ts": {
+      "includeFiles": "contact.json"
+    },
+    "api/contact/list/route.ts": {
+      "includeFiles": "contact.json"
+    }
+  }
+}

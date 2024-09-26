@@ -1,3 +1,5 @@
+import path from "node:path";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: false,
@@ -11,6 +13,13 @@ const nextConfig = {
             },
         ],
     },
+    experimental: {
+        outputFileTracingRoot: path.join(__dirname, '../../'),
+        outputFileTracingIncludes: {
+            '/api/contact': ['public/json/**/*'],
+        },
+    },
+
 };
 
 export default nextConfig;
