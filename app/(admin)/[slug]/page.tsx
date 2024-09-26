@@ -12,6 +12,7 @@ import {ContactType} from "@/types/contact";
 import {fetchData} from "@/services/contactService";
 import {ColDef, ColGroupDef} from "ag-grid-community";
 import {AgGridReact} from "ag-grid-react";
+import {Button} from "@/components/ui/button";
 
 export default function AdminDashboard() {
     const params = useParams<{ slug: string }>();
@@ -88,6 +89,16 @@ export default function AdminDashboard() {
                         enableClickSelection: "enableSelection",
                         checkboxes: false
                     }}
+                    groupButtons={
+                        <>
+                            <Button
+                                id="refresh"
+                                type="button"
+                                onClick={async () => await contactQuery.refetch()}
+                                name="Refresh"
+                            />
+                        </>
+                    }
                 />
             </div>
         )

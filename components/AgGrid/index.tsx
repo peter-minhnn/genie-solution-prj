@@ -1,7 +1,7 @@
 "use strict";
 
 import {AgGridReact} from "ag-grid-react";
-import {MutableRefObject, useEffect, useRef} from "react";
+import {MutableRefObject, ReactNode, useEffect, useRef} from "react";
 import {ColDef, ColGroupDef, GridOptions} from "ag-grid-community";
 
 type AgGridProps<TData> = {
@@ -13,6 +13,7 @@ type AgGridProps<TData> = {
         paginationPageSize: number;
     };
     isFetching?: boolean;
+    groupButtons?: ReactNode;
 } & GridOptions;
 
 export default function AgGrid<TData>({
@@ -21,6 +22,7 @@ export default function AgGrid<TData>({
     columnDefs,
     suppressGridPagination = { pagination: true, paginationPageSize: 10 },
     isFetching = false,
+    groupButtons,
     ...props
 }: AgGridProps<TData>) {
     const gridLocalRef = useRef<AgGridReact<TData> | null>(null);
@@ -42,6 +44,11 @@ export default function AgGrid<TData>({
 
     return (
         <div className={"ag-theme-quartz-dark min-h-[500px] h-[500px]"}>
+            {groupButtons && (
+                <div className="flex flex-row justify-between w-full gap-2 mb-4">
+                    {groupButtons}
+                </div>
+            )}
             <AgGridReact
                 {...props}
                 ref={(ref) => {

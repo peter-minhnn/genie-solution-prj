@@ -1,15 +1,13 @@
 import fs, {readFileSync} from "fs";
-import path from "path";
 
 export async function GET() {
     const jsonPath = process.env.NEXT_PUBLIC_JSON_CONTACT as string;
-    const jsonUrl = path.join(process.env.NEXT_PUBLIC_GITHUB_URL as string, jsonPath);
 
     try {
-        if (!fs.existsSync(jsonUrl)) {
+        if (!fs.existsSync(jsonPath)) {
             return Response.json({code: 0, message: 'File not found'});
         }
-        const response = readFileSync(jsonUrl, "utf-8");
+        const response = readFileSync(jsonPath, "utf-8");
         return Response.json({
             message: 'Get contact successfully',
             data: response ? JSON.parse(response) : null,
