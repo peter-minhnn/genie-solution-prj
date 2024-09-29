@@ -40,7 +40,7 @@ export default function Contact() {
     };
 
     return (
-        <Element name="Contact">
+        <Element name="Contact" id="Contat">
             <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28" data-aos="fade-up">
                 <div className="container">
                     <div className="-mx-4 flex flex-wrap">

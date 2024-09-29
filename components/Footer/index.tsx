@@ -206,9 +206,17 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div
-                        className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
                     <div className="py-8">
+                        <div className="flex justify-center">
+                            <ul className="flex flex-col justify-center items-center [&_li]:text-base text-body-color dark:text-white">
+                                <li>Tax code: 0318431424</li>
+                                <li>Giay Viet Plaza - 8Floor, 180-182 Ly Chinh
+                                    Thang Street, Ward 9, District 3, HCMC</li>
+                                <li>geniesolutionvn@gmail.com</li>
+                                <li>+84-938175020</li>
+                            </ul>
+                        </div>
                         <p className="text-center text-base text-body-color dark:text-white">
                             Authored By {" "}
                             <a

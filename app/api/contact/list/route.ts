@@ -1,16 +1,20 @@
-import fs, {readFileSync} from "fs";
+import dbConnect from "@/lib/dbConnect";
+import Contact from "@/models/Contact";
 
 export async function GET() {
-    const jsonPath = process.cwd() + process.env.NEXT_PUBLIC_JSON_CONTACT;
+    await dbConnect();
 
     try {
-        if (!fs.existsSync(jsonPath)) {
-            return Response.json({code: 0, message: 'File not found'});
+        const result = await Contact.find({});
+        if (!result || Array.isArray(result) && !result.length) {
+            return Response.json({code: 1, message: 'No data', data: []});
         }
-        const response = readFileSync(jsonPath, "utf-8");
+        const contacts = result.map((doc) => {
+            return JSON.parse(JSON.stringify(doc));
+        });
         return Response.json({
             message: 'Get contact successfully',
-            data: response ? JSON.parse(response) : null,
+            data: contacts,
             code: 1
         })
     } catch (error) {

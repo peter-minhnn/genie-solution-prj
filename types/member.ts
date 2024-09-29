@@ -5,5 +5,5 @@ export type Member = {
     title: string;
     imageUrl: string;
     bio: string;
-    portfolio: string;
+    portfolio?: string;
 }

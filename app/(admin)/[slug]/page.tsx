@@ -3,16 +3,20 @@
 import {useParams, useRouter} from "next/navigation";
 import {ReactElement, useMemo, useRef, useState} from "react";
 import {useQuery} from "react-query";
+import {AgGridReact} from "ag-grid-react";
+import {ColDef, ColGroupDef} from "ag-grid-community";
+import { RefreshCcw } from "lucide-react"
+
 //Components
 import LoginModal from "@/components/Modals/LoginModal";
 import AgGrid from "@/components/AgGrid";
+import {Button} from "@/components/ui/button";
+
 //Types
 import {ContactType} from "@/types/contact";
+
 //Services
 import {fetchData} from "@/services/contactService";
-import {ColDef, ColGroupDef} from "ag-grid-community";
-import {AgGridReact} from "ag-grid-react";
-import {Button} from "@/components/ui/button";
 
 export default function AdminDashboard() {
     const params = useParams<{ slug: string }>();
@@ -96,13 +100,16 @@ export default function AdminDashboard() {
                                 type="button"
                                 onClick={async () => await contactQuery.refetch()}
                                 name="Refresh"
-                            />
+                                className="h-[30px]"
+                            >
+                                <RefreshCcw size={16} />
+                            </Button>
                         </>
                     }
                 />
             </div>
         )
-    }, [contactRowData, isLoggedIn, contactQuery]);
+    }, [contactRowData, isLoggedIn, contactQuery.isLoading, contactQuery.isRefetching]);
 
     return (
         <>

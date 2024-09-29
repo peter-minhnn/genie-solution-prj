@@ -22,15 +22,15 @@ const OurStrength = () => {
                         <div className='text-[rgba(12,74,110,.8)] font-semibold'>{item?.tag || ""}</div>
                         <h3 className='sm:pt-8 rich-black font-semibold sm:text-[1.875rem] leading-8'>{item?.title || ""}</h3>
                         <p className='sm:text-[1rem] leading-8'>{item?.description}</p>
-                        <Link href={'/'} className='flex flex-row w-[10rem] gap-1 sm:text-[.938rem] font-semibold leading-6 text-primary transition duration-300 group'>
-                            <span className='transition duration-300 group-hover:text-black'>View Case Study</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                 className="transition duration-300 group-hover:translate-y-[-2px] group-hover:text-black w-5 h-5 text-primary">
-                                <path fillRule="evenodd"
-                                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                      clipRule="evenodd"></path>
-                            </svg>
-                        </Link>
+                        {/*<Link href={'/'} className='flex flex-row w-[10rem] gap-1 sm:text-[.938rem] font-semibold leading-6 text-primary transition duration-300 group'>*/}
+                        {/*    <span className='transition duration-300 group-hover:text-black'>View Case Study</span>*/}
+                        {/*    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"*/}
+                        {/*         className="transition duration-300 group-hover:translate-y-[-2px] group-hover:text-black w-5 h-5 text-primary">*/}
+                        {/*        <path fillRule="evenodd"*/}
+                        {/*              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"*/}
+                        {/*              clipRule="evenodd"></path>*/}
+                        {/*    </svg>*/}
+                        {/*</Link>*/}
                     </div>
                 </div>
                 <Link href={item?.link || '/'}  className='col-span-7 relative lg:order-2 overflow-hidden xl:rounded-tr-2xl xl:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none  h-[450px] xl:h-full'>
@@ -41,7 +41,7 @@ const OurStrength = () => {
                         fetchPriority='auto'
                         layout='fill'
                         sizes="100% 100%"
-                        objectFit='cover'
+                        objectFit='contain'
                         className='absolute w-full h-full hover:scale-105 transition duration-300'
                     />
                 </Link>
@@ -66,7 +66,6 @@ const OurStrength = () => {
                     center
                     mb="40px"
                 />
-
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4">
                         <div className="mx-auto max-w-[1280px] overflow-hidden rounded-md">

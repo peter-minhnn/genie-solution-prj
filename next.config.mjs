@@ -16,7 +16,6 @@ const nextConfig = {
             '/api/contact': ['public/json/**/*'],
         },
     },
-
 };
 
 export default nextConfig;

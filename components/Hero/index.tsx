@@ -41,7 +41,6 @@ const Hero = () => {
                                             duration: 1500,
                                             delay: 100,
                                             smooth: 'easeInOutQuint',
-                                            containerId: 'ContainerElementID',
                                         })}
                                     >
                                         🔥 Contact Us

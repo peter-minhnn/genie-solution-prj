@@ -39,13 +39,14 @@ export default function AgGrid<TData>({
         if (!isFetching && rowData?.length) {
             return gridLocalRef.current!.api?.setGridOption("loading", false);
         }
+        gridLocalRef.current!.api?.setGridOption("loading", false);
         return gridLocalRef.current!.api?.showNoRowsOverlay();
     }, [rowData, isFetching]);
 
     return (
         <div className={"ag-theme-quartz-dark min-h-[500px] h-[500px]"}>
             {groupButtons && (
-                <div className="flex flex-row justify-between w-full gap-2 mb-4">
+                <div className="flex flex-row justify-end w-full gap-2 mb-4">
                     {groupButtons}
                 </div>
             )}

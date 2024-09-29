@@ -2,8 +2,8 @@
 
 import { ThemeProvider } from "next-themes";
 import React, {useEffect} from "react";
-import AOS from "aos";
 import {QueryClient, QueryClientProvider} from "react-query";
+import AOS from "aos";
 
 // Create a client
 const queryClient = new QueryClient();
