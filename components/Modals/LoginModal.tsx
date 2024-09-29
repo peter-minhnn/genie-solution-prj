@@ -34,7 +34,7 @@ export default function LoginModal({setIsLoggedIn}: LoginModalProps) {
 
     return (
         <div id="authentication-modal" tabIndex={-1} aria-hidden="true"
-             className="flex justify-center items-center w-full md:inset-0 h-[100ch] max-h-full">
+             className="flex justify-center items-center w-full md:inset-0 h-[90ch] max-h-full">
             <div className="relative p-4 w-full max-w-md max-h-full">
                 <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <div

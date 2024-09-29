@@ -14,6 +14,8 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {ContactType} from "@/types/contact";
 //Components
 import {ContactSchema} from "@/components/Contact/schema";
+import {useMutation} from "react-query";
+import {Button} from "@/components/ui/button";
 
 export default function Contact() {
     const {
@@ -25,18 +27,27 @@ export default function Contact() {
         resolver: zodResolver(ContactSchema), // Apply the zodResolver
     });
 
-    const onSubmit = async (data: ContactType) => {
-        // Handle form submission
-        const response = await saveContact({
+    const saveContactMutation = useMutation({
+        mutationFn: async (data: ContactType) => await saveContact({
             ...data,
             id: v4()
-        });
-        if (response.code === 1) {
-            toast.success(response.message);
-            reset();
-        } else {
-            toast.error(response.message);
+        }),
+        onSuccess: (response) => {
+            if (response.code === 1) {
+                toast.success(response.message);
+                reset();
+            } else {
+                toast.error(response.message);
+            }
+        },
+        onError: () => {
+            toast.error("Something went wrong");
         }
+    })
+
+    const onSubmit = async (data: ContactType) => {
+        // Handle form submission
+        await saveContactMutation.mutateAsync(data);
     };
 
     return (
@@ -117,11 +128,13 @@ export default function Contact() {
                                             </div>
                                         </div>
                                         <div className="w-full px-4">
-                                            <button
+                                            <Button
                                                 type="submit"
-                                                className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                                                className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                                                disabled={saveContactMutation.isLoading}
+                                            >
                                                 Send Message
-                                            </button>
+                                            </Button>
                                         </div>
                                     </div>
                                 </form>

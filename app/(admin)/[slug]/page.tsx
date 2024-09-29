@@ -80,7 +80,7 @@ export default function AdminDashboard() {
         if (!isLoggedIn) return null;
 
         return (
-            <div className="relative z-10 overflow-hidden bg-white px-20 pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[300px] 2xl:pt-[300px]">
+            <div className="relative z-10 overflow-hidden bg-white px-20 pb-16 pt-[80px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[300px] 2xl:pt-[300px]">
                 <AgGrid
                     gridRef={gridRef}
                     rowData={contactRowData}
