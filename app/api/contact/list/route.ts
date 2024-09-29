@@ -1,6 +1,8 @@
 import dbConnect from "@/lib/dbConnect";
 import Contact from "@/models/Contact";
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
     await dbConnect();
 

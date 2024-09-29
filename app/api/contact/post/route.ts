@@ -1,5 +1,3 @@
-import fs, {readFileSync} from 'fs';
-import {ContactType} from "@/types/contact";
 import dbConnect from "@/lib/dbConnect";
 import Contact from "@/models/Contact";
 
